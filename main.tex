@@ -1,0 +1,39 @@
+%! Author = eelco
+%! Date = 08-05-2023
+
+% Preamble
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[english]{babel}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,
+    allbordercolors=white,
+    hypertexnames=false]{hyperref}
+
+%    \end{macrocode}
+
+% Document
+\begin{document}
+
+    This is een example of a reference to the total figure~\ref{fig:caption_of_example_figure} and the reference of
+    the sub figure example A, in figure~\ref{fig:example_a}, en example B, in figure~\ref{fig:example_b}.
+
+    \begin{figure}[t!]%
+        \begin{subfigure}[t]{0.5\linewidth}%
+            \includegraphics[width=\columnwidth]{example-image-a}
+            \caption{\footnotesize{Example A}}%
+            \label{fig:example_a}%
+        \end{subfigure}%
+
+        \begin{subfigure}[t]{0.5\linewidth}%
+            \includegraphics[width=\columnwidth]{example-image-b}
+            \caption{\footnotesize{Example B}}%
+            \label{fig:example_b}%
+        \end{subfigure}%
+        \caption{Caption of example figure}
+        \label{fig:caption_of_example_figure}%
+    \end{figure}
+
+\end{document}
